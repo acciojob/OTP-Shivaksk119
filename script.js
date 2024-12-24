@@ -5,6 +5,8 @@ inputs.forEach((input,index)=>{
 	input.addEventListener('input',()=>{
 		if(input.value !=''){
 			if(index<inputs.length-1){
+				inputs[index].classList.remove('focused');
+				inputs[index+1].classList.add('focused');
 				inputs[index+1].focus();
 			}
 		}
